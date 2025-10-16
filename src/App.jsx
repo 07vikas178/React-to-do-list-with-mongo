@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Addtask from './Addtask';
 import Viewtask from './Viewtask';
+import './App.css';
 
 function App() {
   const [currentView, setCurrentView] = useState('null');

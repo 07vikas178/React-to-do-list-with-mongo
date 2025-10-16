@@ -1,0 +1,142 @@
+/* General Body Styles & Font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main App Container */
+#root {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* --- App.jsx Styles --- */
+
+/* Container for the main navigation buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 25px;
+}
+
+/* General Button Styles */
+button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #5c67f2;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(92, 103, 242, 0.4);
+}
+
+/* --- Addtask.jsx Styles --- */
+.add-task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1, h2, h4 {
+  color: #333;
+  margin: 0;
+}
+
+/* Date Input */
+input[type="date"] {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Task Input Fields */
+input[type="text"] {
+  width: calc(100% - 24px); /* Full width minus padding */
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #5c67f2;
+}
+
+/* Add Task Button (+) */
+.add-more-btn {
+  background-color: #28a745;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start; /* Aligns button to the left */
+}
+
+/* --- Viewtask.jsx Styles --- */
+
+.task-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list-item {
+  background-color: #f9f9f9;
+  border-left: 4px solid #5c67f2;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list-item strong {
+  font-size: 18px;
+}
+
+/* View/Hide Tasks Button */
+.toggle-tasks-btn {
+  background-color: #6c757d;
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+/* The nested list of individual tasks */
+.nested-task-list {
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+.nested-task-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}

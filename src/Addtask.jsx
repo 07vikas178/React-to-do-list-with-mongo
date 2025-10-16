@@ -29,44 +29,42 @@ function Addtask({ tasks, setTasks }) {
     }
   }
 
-  return (
-    <div>
+ // ... (keep your existing imports and function)
+
+// Inside the return statement:
+return (
+  
+    <div className="add-task-container"> {/* <-- Add className */}
       <h4>Select a date</h4>
-      {/* 2. Pass the event 'e' to your arrow function. */}
       <input
         type="date"
         id="calendar"
         onChange={(e) => { setDate(e.target.value) }}
       />
-
-      {/* 3. This section will now ONLY render if 'date' has a value.
-         The `&&` operator is a common shortcut for conditional rendering in JSX.
-      */}
       {date && (
         <>
           <h1>My tasks for {date}</h1>
           {tasks.map((task, index) => (
-            <>
+            <div key={index}> {/* Use div for better structure */}
               <input
-                key={index}
                 type="text"
                 placeholder="Enter task"
                 value={task}
                 onChange={(e) => updateTask(index, e.target.value)}
               />
-              <br />
-          
-            </>
+            </div>
           ))}
-          <button onClick={addTask}>+</button>
-              <div>
-                <button onClick={() => storeTask()}> Submit </button>
-              </div>
+          <button onClick={addTask} className="add-more-btn">+</button> {/* <-- Add className */}
+          <div>
+            <button onClick={() => storeTask()}> Submit </button>
+          </div>
         </>
       )}
-
     </div>
+  
   );
+
 }
+// ... (rest of the component)
 
 export default Addtask;
