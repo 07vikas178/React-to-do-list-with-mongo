@@ -19,10 +19,10 @@ function Addtask({ tasks, setTasks }) {
       const response = await fetch('http://localhost:5001/api/store', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ tasks: tasks, date: date }),
+        body: JSON.stringify({ task: tasks, date: date }),
       });
       const savedTask = await response.json();
-      alert(response.message);
+      alert(savedTask.message);
     }
     catch (err) {
       console.log(err);
